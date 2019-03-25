@@ -1,0 +1,32 @@
+<!--Homepage-->
+<div class="container">
+    <div class="col-md-12 jumbotron">
+        <div class="text-center">
+            <img id="tmzlogo"src="https://upload.wikimedia.org/wikipedia/commons/9/94/TMZ_Logo.svg">
+            <h1 id="tmztitle">  Mongo Scraper</h1>
+        </div>
+
+    </div>
+    <div class="col-md-12">
+        {{#if article}}
+            {{#each article}}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>{{this.title}}</h4>
+                </div>
+                <div class="panel-body">
+                    <p> {{this.summary}}</p>
+                    <a href={{this.link}} target="_blank">{{this.link}}</a>
+                    <button type="button" id="savebtn" data-id={{this._id}}><i class="far fa-save"></i> Save Article</button>
+                </div>
+            </div>
+            {{/each}}
+        {{else}}
+        <div class="panel panel-default">
+            <div class="panel-body">
+            <h4>Uh Oh. Looks like we don't have any new articles.</h4>
+            </div>
+         </div>
+        {{/if}}
+    </div>
+</div>

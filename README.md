@@ -1,1 +1,2 @@
-# TMZ-Scraper
+TMZ article scraper
+

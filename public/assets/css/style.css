@@ -1,0 +1,39 @@
+body {
+    margin-top: 5%;
+}
+
+#tmzlogo {
+    width:30%;
+}
+
+#savebutton {
+    color:black;
+    background-color: red;
+
+}
+
+.jumbotron {
+    background-color:black;
+    border-radius: 5px;
+    color:white;
+}
+
+
+
+#savebtn {
+    margin: 2% 70%;
+    background-color: #439843;
+    border-radius: 5px;
+    width: 20%;
+    color: white;
+    padding: 1.5%;
+    
+}
+
+#deletebtn {
+    margin: 2% 0 0 0;
+}
+
+#notesbtn {
+    margin: 2% 0 0 0;
+}
