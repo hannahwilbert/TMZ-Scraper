@@ -5,11 +5,11 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var path = require("path");
 
-// Requiring Note and Article models
+// Requiring models for notes and articles
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
 
-// Scraping tools
+// Tools for scraping
 var request = require("request");
 var cheerio = require("cheerio");
 
@@ -22,7 +22,7 @@ var port = process.env.PORT || 3007
 // Initialize Express
 var app = express();
 
-// Use morgan and body parser with our app
+// Use morgan and body parser 
 app.use(logger("dev"));
 app.use(bodyParser.urlencoded({
   extended: false
@@ -50,7 +50,7 @@ db.on("error", function(error) {
   console.log("Mongoose Error: ", error);
 });
 
-// Once logged in to the db through mongoose, log a success message
+// Once logged in to the db through mongoose, log success message
 db.once("open", function() {
   console.log("Mongoose connection successful.");
 });
@@ -80,9 +80,9 @@ app.get("/saved", function(req, res) {
 
 // A GET request to scrape the echojs website
 app.get("/scrape", function(req, res) {
-  // First, we grab the body of the html with request
+  // First, request the hTML body
   request("https://www.tmz.com/", function(error, response, html) {
-    // Then, we load that into cheerio and save it to $ for a shorthand selector
+    // Then, load that into cheerio
     var $ = cheerio.load(html);
     // Now, we grab every h2 within an article tag, and do the following:
     $("article").each(function(i, element) {
