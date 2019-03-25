@@ -1,4 +1,4 @@
 TMZ article scraper
 
 Heroku Link: 
-https://git.heroku.com/young-journey-11258.git
+https://young-journey-11258.herokuapp.com/
